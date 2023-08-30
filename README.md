@@ -35,7 +35,7 @@ This is a Kaggle competition asking participants to build a model to predict bik
 
 **5. Evaluation Metric:** The required evaluation metric is the Root Mean Square Logarithmic Error (RMSLE), defined by the following equation:
 
-$RMSLE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(log(p_{i} + 1) - log(a_{i}+1))^2}$  
+$`RMSLE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(log(p_{i} + 1) - log(a_{i}+1))^2}`$  
 
 where $p_{i}$ is the predicted values and $a_{i}$ is the actual values.  
 
