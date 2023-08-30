@@ -35,7 +35,8 @@ This is a Kaggle competition asking participants to build a model to predict bik
 
 **5. Evaluation Metric:** The required evaluation metric is the Root Mean Square Logarithmic Error (RMSLE), defined by the following equation:
 
-$RMSLE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(log(p_{i} + 1) - log(a_{i}+1))^2}$
+$RMSLE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(log(p_{i} + 1) - log(a_{i}+1))^2}$  
+
 where $p_{i}$ is the predicted values and $a_{i}$ is the actual values.  
 
 RMSLE scorer is utilized to assess the model's performance. RMSLE is a metric commonly used in regression tasks to measure the accuracy of predictions. It penalizes underestimation and overestimation of the target variable, making it suitable for this bike rental count prediction task. The lower the RMSLE value, the better the model's predictions align with the actual target values.
@@ -62,8 +63,15 @@ RMSLE scorer is utilized to assess the model's performance. RMSLE is a metric co
 ![](https://github.com/nhh979/Bike_Sharing_Demand_proj/blob/main/images/baseline_models_comparison.jpg)
 
 - In the hyperparameter tuning phase, We found out that Lasso and Ridge models produced lower RMSLE score (about 10% difference) and less overfitting but still greatly different (about 2-3 times greater) in comparison with Random Forest and XGBoost models. Although Random Forest and XGBoost models with hyperparameter tuning outperformed Lasso and Ridge, their RMSLE score were a little larger (about 10-15%) compared with their baseline model. Besides, there is a bit gap between training and test RMSLE score for Random Forest, indicating  high overfitting. Meanwhile, XGBoost performance were better than Random Forest and less overfitting.
-- 
+![](https://github.com/nhh979/Bike_Sharing_Demand_proj/blob/main/images/tuned_models.jpg)
+
 - Results on Kaggle submissions: XGBoost model provided public and private score 0.47501, while this number is 0.59508 for Random Forest model. With the ratio XGBoost:RandomForest = 0.75:0.25 combination, the score is 0.47496 on both public and private leaderboard.
+  
+|Model|Public RMSLE|Private RMSLE|
+|------|------|------|
+|XGBoost|0.47501|0.47501|
+|Random Forest|0.59508|0.59508|
+|XGBoost & RandomForest|0.47496|0.47496|
 
 ## VI. Conclusion
 In summary, this notebook conducted a comprehensive analysis of hourly bike rental data spanning two years. It encompassed data exploration, preprocessing, and feature engineering to prepare the data for modeling. The exploratory data analysis provided valuable insights into rental patterns based on different factors, such as weather, day of the week, and hour of the day.
