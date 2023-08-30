@@ -35,9 +35,7 @@ This is a Kaggle competition asking participants to build a model to predict bik
 
 **5. Evaluation Metric:** The required evaluation metric is the Root Mean Square Logarithmic Error (RMSLE), defined by the following equation:
 
-<div align="center">
 $RMSLE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(log(p_{i} + 1) - log(a_{i}+1))^2}$
-</div>
 where $p_{i}$ is the predicted values and $a_{i}$ is the actual values.  
 
 RMSLE scorer is utilized to assess the model's performance. RMSLE is a metric commonly used in regression tasks to measure the accuracy of predictions. It penalizes underestimation and overestimation of the target variable, making it suitable for this bike rental count prediction task. The lower the RMSLE value, the better the model's predictions align with the actual target values.
@@ -61,7 +59,7 @@ RMSLE scorer is utilized to assess the model's performance. RMSLE is a metric co
 
 ## V. Model Performance
 - Random Forest and XGBoost outperform three other regression models as the RMSLE on both the cleaned and raw test sets of those are about tripple less than those of other model. After appyling feature engineering, all models performed better with lower RMSLE scores. Random Forest and XGBoost seem to overfit since the RMSLE scores on the test set are way greater than those on the training set.
-[](https://github.com/nhh979/Bike_Sharing_Demand_proj/blob/main/images/baseline_models_comparison.jpg)
+![](https://github.com/nhh979/Bike_Sharing_Demand_proj/blob/main/images/baseline_models_comparison.jpg)
 
 - In the hyperparameter tuning phase, We found out that Lasso and Ridge models produced lower RMSLE score (about 10% difference) and less overfitting but still greatly different (about 2-3 times greater) in comparison with Random Forest and XGBoost models. Although Random Forest and XGBoost models with hyperparameter tuning outperformed Lasso and Ridge, their RMSLE score were a little larger (about 10-15%) compared with their baseline model. Besides, there is a bit gap between training and test RMSLE score for Random Forest, indicating  high overfitting. Meanwhile, XGBoost performance were better than Random Forest and less overfitting.
 - 
