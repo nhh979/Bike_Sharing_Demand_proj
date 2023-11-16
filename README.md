@@ -36,7 +36,7 @@ This is a Kaggle competition asking participants to build a model to predict bik
 
 **2. Exploratory Data Analysis (EDA):** This is a crucial process that gives us a deeper understanding of the dataset. In this step, We tried to find some interesting insights, identify patterns, and discover the relationships and trends between variables. This step is extremely helpful when it comes to detecting outliers, missing values, or any other issues that might affect our model building later.  
 
-**3. Data Cleaning:** In this step, we removed outlying values in the target variables using the z-score of 3 method. We also determined that `humidity` and `windspeed` columns contains missing values represented by 0. Of those columns, `windspeed` has way too many missing values compared with `humidity` column (12% vs 0.2%)  
+**3. Data Cleaning:** In this step, we removed outlying values in the target variables using the z-score of 3 method. We also determined that `humidity` and `windspeed` columns contains missing values represented by 0. Of those columns, `windspeed` has way too many missing values compared with `humidity` column (12% vs 0.2%).  
 
 **4. Feature Engineering:** We created dummy variables for categorical variable such as `weather` and `season`. We also created new variables called `rush_hour` based on the hour of the day and categorical `temp` column based on the temperature during that time. Besides, we extracted time of day based on `datetime` column. We then dropped unnecessary features like `datetime`, `atemp` which is highly correlated with `temp`, `windspeed` which has a lot of missing values and has no correlation with the target variables, and `casual` and `registered` which do not appear in the test set.  
 
